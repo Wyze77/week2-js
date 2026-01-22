@@ -72,14 +72,12 @@ function removeProductFromCart(productId) {
   if (itemIndex !== -1) {
     const item = SHOPPING_CART[itemIndex];
     if (item.quantity >= 2) {
-      // CASE 1: If quantity >= 2, decrement it [cite: 1, 77]
       item.quantity--;
     } else {
-      // CASE 2: If quantity is 1, remove the item from the array [cite: 1, 80]
       SHOPPING_CART.splice(itemIndex, 1);
     }
   }
-  // CASE 3: If product does not exist, do nothing [cite: 1, 83]
+
 }
 
 // --------------------------------------------------------
